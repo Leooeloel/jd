@@ -161,10 +161,14 @@
     background: #d9d9d9;
 }
 
-.menu-box ul li:hover .sub-menu {
+/* .menu-box ul li:hover .sub-menu {
+    display: block;
+} */
+ 
+.menu-box ul li.active .sub-menu {
     display: block;
 }
- 
+
 .menu-box ul li a {
     color: #333333;
     text-decoration: none;
@@ -226,7 +230,7 @@
 
 .sub-menu dd {
     padding: 4px 8px 4px 8px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .sub-menu .right-box {
