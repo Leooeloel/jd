@@ -165,7 +165,7 @@
     display: block;
 } */
  
-.menu-box ul li.active .sub-menu {
+.menu-box ul li .active {
     display: block;
 }
 
@@ -244,4 +244,28 @@
 
 .sub-menu .pic-box:last-child {
     margin: 0px;
+}
+
+.slider-box {
+    margin-right: 10px;
+}
+
+.slider-box .slider {
+    width: 590px;
+    height: 470;
+    position: relative;
+    /* 图片不能溢出相框 */
+    overflow: hidden; 
+}
+
+.slider-box .slider ul {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500%;
+    height: 100%;
+}
+
+.slider-box .slider ul li {
+    float: left;
 }

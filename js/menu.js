@@ -6,6 +6,7 @@ class Menu {
         this.subMenuEles = this.box.querySelectorAll(".sub-menu")
 
         this.timer1 = null
+        this.timer2 = null
 
         this.init()
     }
@@ -17,16 +18,17 @@ class Menu {
             item.addEventListener("mouseenter", (e) => {
                 let li = e.target
                 console.log("mouseenter")
+ 
+                if (this.timer1 != null) {
+                    clearTimeout(this.timer1)
+                }
 
                 this.timer1 = setTimeout(() => {
                     this.subMenuEles.forEach((item) => {
                         item.classList.remove("active")
                     })
-                    
+                    li.children[1].classList.add("active")
                 }, 200);
-
-
-
             })
         });
 
@@ -34,6 +36,14 @@ class Menu {
             item.addEventListener("mouseleave", (e) => {
                 let li = e.target
                 console.log("mouseleave")
+
+                if (this.timer2 != null) {
+                    clearTimeout(this.timer2)
+                }
+
+                this.timer2 = setTimeout(() => {
+                    li.children[1].classList.remove("active")
+                }, 200)
             })
         })
 
