@@ -9,6 +9,7 @@ class Slider {
         this.index = 1
         this.animated = false
         this.sliders = this.picBox.children.length
+        this.auto = null
 
         this.init()
     }
@@ -18,6 +19,7 @@ class Slider {
         this.initPoint()
         this.copyPic()
         this.leftRight()
+        this.play()
     }
 
     initPoint() {
@@ -134,6 +136,22 @@ class Slider {
             this.move(this.SliderWidth)            
         })
 
+    }
+
+    play() {
+        this.auto = setInterval(() => {
+            this.box.querySelector(".right-box").click()
+        }, 2000)
+
+        this.box.addEventListener("mouseenter", () => {
+            clearInterval(this.auto)
+        })
+
+        this.box.addEventListener("mouseleave", () => {
+            this.auto = setInterval(() => {
+                this.box.querySelector(".right-box").click()
+            }, 2000)
+        })
     }
 
 

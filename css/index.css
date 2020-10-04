@@ -328,3 +328,13 @@
 .slider-box .index-box > ol > li.active {
     background: #e1251b;
 }
+
+.ad-box {
+    width: 190px;
+    margin-right: 10px;
+}
+
+.ad-box .pic-box:not(:last-child) {
+    height: 150px;
+    margin-bottom: 10px;
+}
