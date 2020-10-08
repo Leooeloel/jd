@@ -5,7 +5,7 @@ class Slider {
         this.picBox = this.box.querySelector("ul")
         this.indexBox = this.box.querySelector(".index-box")
 
-        this.SliderWidth = this.box.clientWidth 
+        this.SliderWidth = this.box.clientWidth
         this.index = 1
         this.animated = false
         this.sliders = this.picBox.children.length

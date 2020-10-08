@@ -1,3 +1,5 @@
+/*详细讲一下js代码，特别是监听、循环执行部分*/
+
 class Menu {
     constructor(id) {
         this.box = document.querySelector(id)
